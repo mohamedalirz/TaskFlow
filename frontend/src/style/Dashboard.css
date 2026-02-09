@@ -1,0 +1,325 @@
+* {
+  font-family: Inter, sans-serif;
+  box-sizing: border-box;
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.top-card {
+  background: linear-gradient(135deg, #2e9206, #0c9607);
+  color: white;
+  padding: 26px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 25px 50px rgba(99, 102, 241, 0.35);
+}
+
+.add-btn {
+  background: white;
+  color:  #0c9607;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 30px 0 15px;
+}
+
+.count {
+  background:  #0c9607;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.link {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color:  #0c9607;
+  cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card.red {
+  border-left: 4px solid #ef4444;
+}
+
+.card.green {
+  border-left: 4px solid #22c55e;
+}
+.card.blue {
+  border-left: 4px solid #0d2cda;
+}
+.card.yellow {
+  border-left: 4px solid #facc15;
+}
+.invite {
+  margin-top: 40px;
+}
+
+.empty-box {
+  margin-top: 16px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 18px;
+  border: 2px dashed #d1d5db;
+  color: #6b7280;
+}
+
+.projects-top {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.open-btn {
+  margin-top: 10px;
+  background: #0c9607;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+.new-project-form {
+  margin-top: 30px;
+}
+
+.form-card {
+  background: rgba(255,255,255,0.8);
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  max-width: 600px;
+}
+
+.form-card label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+}
+
+.form-card textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.create-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #0c9607;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* Boutons de couleur */
+.color-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+.color-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+/* Couleurs */
+.color-btn.red {
+  background: #ef4444;
+}
+.color-btn.green {
+  background: #22c55e;
+}
+.color-btn.blue {
+  background: #3b82f6;
+}
+.color-btn.yellow {
+  background: #facc15;
+}
+
+/* Sélection */
+.color-btn.selected {
+  border: 4px solid #000;
+}
+
+/* Create button style */
+.create-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background: #0c9607;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ----- Invitations Section ----- */
+.invite {
+  margin-top: 2rem;
+}
+
+.invite h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.empty-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.invitation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.invitation-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.invitation-card p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.invitation-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.accept-btn, .decline-btn {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.accept-btn {
+  background-color: #22c55e; /* green */
+  color: white;
+}
+
+.accept-btn:hover {
+  background-color: #16a34a;
+}
+
+.decline-btn {
+  background-color: #ef4444; /* red */
+  color: white;
+}
+
+.decline-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* Optional: make small screen responsive */
+@media (max-width: 600px) {
+  .invitation-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .invitation-actions {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Remove button */
+.remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ef4444; /* red */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #dc2626; /* darker red on hover */
+}
+
+.remove-btn:active {
+  transform: scale(0.95);
+}
